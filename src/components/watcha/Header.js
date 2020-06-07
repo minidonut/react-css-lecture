@@ -14,9 +14,11 @@ export const SearchBar = () => {
 
 export const Header = () => {
   return <div className="Header-container">
-    <Link to="/watcha" className="Header-home">
-      <div className="Header-logo" />
-    </Link>
+    <div className="Header-home">
+      <Link to="/watcha">
+        <div className="Header-logo" />
+      </Link>
+    </div>
     <SearchBar />
     <SignGroup />
   </div>;

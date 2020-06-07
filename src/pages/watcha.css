@@ -1,3 +1,7 @@
+.Watcha-container {
+  padding-top: 72px;
+}
+
 .Header-container {
   display: flex;
   justify-content: space-between;
@@ -25,6 +29,12 @@
 }
 
 .Header-home {
+  width: 190px;
+}
+
+.Header-home a {
+  display: block;
+  width: 98px;
   padding: 20px;
 }
 
@@ -141,4 +151,21 @@
 
 .FootDialog-container div {
   margin-left: 32px;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: rgba(0,0,0,0.1);
+}
+
+.Section-container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.SmallItem-container {
+  width: 33%;
+  height: 76px;
+  background: rgb(220,220,220);
 }
