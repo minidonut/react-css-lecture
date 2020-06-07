@@ -230,8 +230,13 @@
   height: 270px;
   width: 150px;
   padding: 0 5px;
+  cursor: pointer;
+}
+
+.Item-portrait-container > p {
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: pre;
 }
 
 .Item-portrait-container img {
