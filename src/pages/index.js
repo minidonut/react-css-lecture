@@ -1,9 +1,10 @@
 import Instagram from "./instagram";
-import Youtube from "./youtube";
+import Facebook from "./facebook";
 import Watcha from "./watcha";
 
 export {
   Instagram,
-  Youtube,
+  Facebook,
   Watcha,
 };
+
