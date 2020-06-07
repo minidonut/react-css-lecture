@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import { Instagram, Watcha, Youtube } from "./pages";
+import { Provider } from "react-redux";
+import initStore from "./redux";
+const store = initStore();
 
 const LinkButton = ({ to, text }) => {
   return <Link to={to}
@@ -32,10 +35,12 @@ const Main = () => {
 
 function App() {
   return (<BrowserRouter>
-    <Route exact path="/" component={Main} />
-    <Route path="/instagram" component={Instagram} />
-    <Route path="/youtube" component={Youtube} />
-    <Route path="/watcha" component={Watcha} />
+    <Provider store={store}>
+      <Route exact path="/" component={Main} />
+      <Route path="/instagram" component={Instagram} />
+      <Route path="/youtube" component={Youtube} />
+      <Route path="/watcha" component={Watcha} />
+    </Provider>
   </BrowserRouter>
   );
 }
