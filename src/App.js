@@ -1,45 +1,19 @@
 import React from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
-import { Instagram, Watcha, Youtube } from "./pages";
+import { BrowserRouter, Route } from "react-router-dom";
 import { Provider } from "react-redux";
+import * as Page from "./pages";
 import initStore from "./redux";
 const store = initStore();
 
-const LinkButton = ({ to, text }) => {
-  return <Link to={to}
-    style={{
-      color: "rgba(27, 28, 37, 0.9)",
-      textDecoration: "none",
-      padding: "16px",
-      margin: "4px",
-      border: "1px solid rgba(27, 28, 37, 0.2)",
-      borderRadius: "4px",
-      cursor: "pointer",
-    }}>
-    <p>{text}</p>
-  </Link>;
-};
 
-const Main = () => {
-  return <div style={{
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    height: "100vh"
-  }}>
-    <LinkButton text="Instagram" to="/instagram" />
-    <LinkButton text="Youtube" to="/youtube" />
-    <LinkButton text="Watcha" to="/watcha" />
-  </div>;
-};
 
 function App() {
   return (<BrowserRouter>
     <Provider store={store}>
-      <Route exact path="/" component={Main} />
-      <Route path="/instagram" component={Instagram} />
-      <Route path="/youtube" component={Youtube} />
-      <Route path="/watcha" component={Watcha} />
+      <Route exact path="/" component={Page.Main} />
+      <Route path="/instagram" component={Page.Instagram} />
+      <Route path="/facebook" component={Page.Facebook} />
+      <Route path="/watcha" component={Page.Watcha} />
     </Provider>
   </BrowserRouter>
   );

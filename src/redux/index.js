@@ -9,4 +9,4 @@ const initStore = () => {
 };
 
 
-export default initStore();
+export default initStore;
