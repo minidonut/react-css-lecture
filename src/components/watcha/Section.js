@@ -7,14 +7,14 @@ export const Section = ({ title, children, more, link = "/" }) => {
       <h2>{title}</h2>
       {more ? <Link to={link}>더보기</Link> : null}
     </div>
-    <div>
+    <div className="List-container">
       {children}
     </div>
     <div className="divider" />
   </div>;
 };
 
-export const SmallItem = () => {
-  return <div className="SmallItem-container">
+export const Item = () => {
+  return <div className="Item-container">
   </div>;
 };

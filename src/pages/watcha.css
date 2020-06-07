@@ -164,8 +164,33 @@
   margin-right: 20px;
 }
 
-.SmallItem-container {
+.List-container {
+  height: 244px;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-content: flex-start;
+  list-style: none;
+  flex-flow: column wrap;
+  overflow-x: auto;
+
+}
+
+.List-container::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 100%;
+}
+
+.List-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.Item-container {
   width: 33%;
   height: 76px;
-  background: rgb(220,220,220);
+  border: 1px solid rgba(0,0,0, 0.2);
 }

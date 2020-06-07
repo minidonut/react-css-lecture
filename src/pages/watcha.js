@@ -3,7 +3,7 @@ import {
   Header,
   FootDialog,
   Section,
-  SmallItem,
+  Item,
 } from "../components/watcha";
 import "./watcha.css";
 import { useSelector } from "react-redux";
@@ -22,7 +22,7 @@ const Page = () => {
     <Section title="상위 검색 결과">
     </Section>
     <Section title="TV" more>
-      {tv_seasons.map(x => <SmallItem key={x.code} />)}
+      {tv_seasons.map(x => <Item key={x.code} />)}
     </Section>
     <FootDialog />
   </div>;
